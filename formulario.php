@@ -21,12 +21,12 @@ require_once('calculoIMC.php'); //esse require once ta chamando a função do ca
             </div>
             <div class="mb-3">
                 <label  class="form-label">Altura(m)</label>
-                <input type="number"step=".01" class="form-control" id="inserirAltura" name="inserirAltura" >
+                <input type="number"step=".01" class="form-control" id="inserirAltura" name="inserirAltura"required="required" >
 
             </div>
             <div class="mb-3">
                 <label  class="form-label">Peso(kg)</label>
-                <input type="text" class="form-control" id="inserirPeso" name="inserirPeso">
+                <input type="text" class="form-control" id="inserirPeso" name="inserirPeso" required="required">
 
             </div>
             <div class="radios-botoes">
@@ -42,8 +42,7 @@ require_once('calculoIMC.php'); //esse require once ta chamando a função do ca
 <br>
             <button type="submit" name="calcular" class="btn btn-primary btn-sm">Calcular!</button>
             <br>
-            <button type="reset" class="bbtn btn-link">Resetar</button>
-
+            <h6>RESULTADO</h6>
             <p>
             <!--(isset ($resultado)) ? $resultado:'' -->
                 <?php if(isset($resultado)){
